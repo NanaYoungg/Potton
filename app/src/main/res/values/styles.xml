@@ -1,0 +1,25 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="SplashFont">
+        <item name="android:textColor">@color/colorWhith</item>
+        <item name="android:fontFamily">@font/nanumbarungothic_bold</item>
+        <item name="android:textSize">50dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:shadowRadius">5.0</item>
+        <item name="android:shadowDx">5.0</item>
+        <item name="android:shadowDy">5.0</item>
+        <item name="android:shadowColor">@color/colorSpShadow</item>
+    </style>
+</resources>
