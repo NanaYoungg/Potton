@@ -19,8 +19,10 @@ public class SplashActivity extends AppCompatActivity {
         setContentView(R.layout.activity_splash);
 
         ImageView imageView = (ImageView)findViewById(R.id.splash_gif);
+
         GlideDrawableImageViewTarget gifImage = new GlideDrawableImageViewTarget(imageView);
-        Glide.with(this).load(R.drawable.door2).into(gifImage);
+
+        Glide.with(this).load(R.drawable.door).into(gifImage);
 
         Handler hd = new Handler();
         hd.postDelayed(new splashhandler(), 3000);
