@@ -21,6 +21,7 @@
         <activity android:name=".MainActivity"/>
         <activity android:name=".MenuActivity"/>
         <activity android:name=".BluethoothActtivity"/>
+        <activity android:name=".SoundActivity"/>
     </application>
 
 

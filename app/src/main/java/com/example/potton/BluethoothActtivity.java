@@ -42,9 +42,14 @@ public class BluethoothActtivity extends AppCompatActivity {
                         getApplicationContext(),
                         MenuActivity.class);
                 startActivity(intent);
-                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+
             }
         });
+
+
+
+
+
     }
 
 

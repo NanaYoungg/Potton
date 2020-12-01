@@ -21,7 +21,24 @@ public class MenuActivity extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_menu);
         Button blueMenuBtn = (Button)findViewById(R.id.menu_bluetooth_setting);
-        //세팅 메뉴 이동
+        Button soundMenuBtn = (Button)findViewById(R.id.menu_sound_setting);
+        ImageButton homeBtn = (ImageButton)findViewById(R.id.home_btn);
+
+        //홈 이동
+        homeBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(
+                        getApplicationContext(),
+                        MainActivity.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+            }
+        });
+
+
+
+        //블루투스 세팅 이동
         blueMenuBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -29,7 +46,19 @@ public class MenuActivity extends AppCompatActivity {
                         getApplicationContext(),
                         BluethoothActtivity.class);
                 startActivity(intent);
-                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+
+            }
+        });
+
+        //소리 세팅 이동
+        soundMenuBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(
+                        getApplicationContext(),
+                        SoundActivity.class);
+                startActivity(intent);
+
             }
         });
 
