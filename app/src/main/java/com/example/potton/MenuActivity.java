@@ -22,6 +22,7 @@ public class MenuActivity extends AppCompatActivity {
         setContentView(R.layout.activity_menu);
         Button blueMenuBtn = (Button)findViewById(R.id.menu_bluetooth_setting);
         Button soundMenuBtn = (Button)findViewById(R.id.menu_sound_setting);
+        Button guestureMenuBtn = (Button)findViewById(R.id.menu_guesture_setting);
         ImageButton homeBtn = (ImageButton)findViewById(R.id.home_btn);
 
         //홈 이동
@@ -57,6 +58,18 @@ public class MenuActivity extends AppCompatActivity {
                 Intent intent = new Intent(
                         getApplicationContext(),
                         SoundActivity.class);
+                startActivity(intent);
+
+            }
+        });
+
+        //제스쳐 세팅 이동
+        guestureMenuBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(
+                        getApplicationContext(),
+                        GuestureActivity.class);
                 startActivity(intent);
 
             }

@@ -30,7 +30,6 @@ public class MainActivity extends AppCompatActivity {
     private TextToSpeech textToSpeech ;
     private Button btn;
     private TextView inputText;
-    private EditText editText;
 
 
     @Override
@@ -41,7 +40,6 @@ public class MainActivity extends AppCompatActivity {
 
         ImageButton settingBtn = (ImageButton)findViewById(R.id.setting_btn);
         btn = (Button)findViewById(R.id.button);
-        editText = (EditText) findViewById(R.id.et);
 
         inputText = (TextView)findViewById(R.id.main_tv);
         inputText.setText("손동작을 따라해 주세요");
@@ -97,7 +95,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View arg0) {
 
-                String data = editText.getText().toString();
+                String data = inputText.getText().toString();
                 Log.i("TTS", "button clicked: " + data);
                 int speechStatus = textToSpeech.speak(data, TextToSpeech.QUEUE_FLUSH, null);
 

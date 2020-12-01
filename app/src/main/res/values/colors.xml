@@ -11,4 +11,7 @@
     <color name="colorOrangeShadow">#756a67</color>
     <color name="colorBlueGrey">#5a6470</color>
     <color name="colorBlackGrey">#1a1c21</color>
+    <color name="pink1">#e69cb0</color>
+    <color name="pink2">#e06c8b</color>
+    <color name="pink3">#db3763</color>
 </resources>

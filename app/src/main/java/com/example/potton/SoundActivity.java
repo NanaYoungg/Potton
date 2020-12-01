@@ -2,6 +2,7 @@ package com.example.potton;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.media.AudioManager;
 import android.os.Bundle;
 import android.text.InputType;
 import android.view.View;
@@ -10,11 +11,14 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+
+import me.itangqi.waveloadingview.WaveLoadingView;
 
 public class SoundActivity extends AppCompatActivity {
     private Button myButton;
@@ -23,6 +27,9 @@ public class SoundActivity extends AppCompatActivity {
     private Button myButton2;
     private TextView textView1;
     private TextView textView2;
+
+    private SeekBar seekbar;
+    private WaveLoadingView waveLoadingView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,8 +43,34 @@ public class SoundActivity extends AppCompatActivity {
         textView1 = findViewById(R.id.tv1);
         textView2 = findViewById(R.id.tv2);
 
-        textView1.setText("제스쳐를 따라해 주세요");
+        textView1.setText("손동작을 따라해 주세요");
         textView2.setText("인식 완료");
+
+        // AudioManager
+        final AudioManager audioManager = (AudioManager) getSystemService(AUDIO_SERVICE);
+        int nMax = audioManager.getStreamMaxVolume(AudioManager.STREAM_MUSIC);
+        int nCurrentVolumn = audioManager.getStreamVolume(AudioManager.STREAM_MUSIC);
+
+        // SeekBar
+        seekbar = (SeekBar)findViewById(R.id.sound);
+        seekbar.setMax(nMax);
+        seekbar.setProgress(nCurrentVolumn);
+        waveLoadingView = (WaveLoadingView)findViewById(R.id.waveLoadingView);
+        waveLoadingView.setProgressValue((int)(nCurrentVolumn*6.6));
+
+        seekbar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar){}
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {}
+            public void onProgressChanged(SeekBar seekBar, int Progress, boolean fromUser){
+                //시크바 상태가 변경되었을때  progress = seekbar상태값
+                waveLoadingView.setProgressValue((int)(Progress*6.6));
+                waveLoadingView.setBottomTitle(String.format("%d%%",(int)(Progress*6.6)));
+                audioManager.setStreamVolume(AudioManager.STREAM_MUSIC, Progress, 0);
+            }
+        });
+
 
 
 
