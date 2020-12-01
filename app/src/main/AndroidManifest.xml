@@ -3,6 +3,9 @@
     package="com.example.potton">
     <uses-permission android:name="android.permission.BLUETOOTH" />
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
     <application
         android:allowBackup="true"
@@ -22,7 +25,10 @@
         <activity android:name=".MenuActivity"/>
         <activity android:name=".BluethoothActtivity"/>
         <activity android:name=".SoundActivity"/>
+        <activity android:name=".GuestureActivity"/>
     </application>
+
+
 
 
 </manifest>

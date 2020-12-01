@@ -34,7 +34,6 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginTop="20dp"
-        android:text="손동작을 따라해 주세요"
         style="@style/TextOrange"
         />
 

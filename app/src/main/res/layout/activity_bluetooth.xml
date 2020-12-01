@@ -35,16 +35,16 @@
     <Button
         android:id="@+id/bluetooth_btn"
         android:layout_width="300dp"
-        android:layout_height="70dp"
-        android:background="@drawable/menu_btn"
-        app:layout_constraintTop_toBottomOf="@id/tool_bar"
+        android:layout_height="100dp"
+        android:background="@drawable/button_seletor"
+        app:layout_constraintTop_toTopOf="@id/tool_bar"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         android:text="블루투스 설정하기"
         android:textColor="@color/colorWhith"
         android:fontFamily="@font/nanumbarungothic_bold"
         android:textSize="25dp"
-        android:layout_marginTop="20dp"
         />
 
 

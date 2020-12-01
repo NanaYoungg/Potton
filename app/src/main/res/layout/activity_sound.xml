@@ -4,6 +4,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/colorMain">
+
     <ImageView
         android:id="@+id/tool_bar"
         android:layout_width="match_parent"
@@ -16,7 +17,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="소리설정"
+        android:text="소리 설정"
         style="@style/MenuTitleBtn"
         app:layout_constraintRight_toRightOf="@id/tool_bar"
         app:layout_constraintTop_toTopOf="@id/tool_bar"
@@ -34,5 +35,79 @@
         android:layout_marginLeft="15dp"
         android:layout_marginTop="5dp"
         />
+
+    <ImageView
+        android:id="@+id/img1"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/webcam"
+        app:layout_constraintTop_toBottomOf="@id/tool_bar"
+        android:layout_marginTop="40dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="20dp"
+        />
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        app:layout_constraintLeft_toRightOf="@id/img1"
+        app:layout_constraintTop_toTopOf="@id/img1"
+        app:layout_constraintBottom_toBottomOf="@id/img1"
+        android:layout_marginLeft="20dp"
+        android:textColor="@color/colorBlackGrey"
+        android:background="@color/colorWhith"
+        android:gravity="left"
+        />
+    <Button
+        android:id="@+id/btn1"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        app:layout_constraintLeft_toRightOf="@id/tv1"
+        app:layout_constraintTop_toTopOf="@id/tv1"
+        app:layout_constraintBottom_toBottomOf="@id/tv1"
+        android:background="@drawable/button_seletor"
+        android:layout_marginLeft="20dp"
+        style="@style/MenuTitleBtn"
+        android:text="수정"
+        />
+
+    <ImageView
+        android:id="@+id/img2"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/checked"
+        app:layout_constraintTop_toBottomOf="@id/img1"
+        app:layout_constraintLeft_toLeftOf="@id/img1"
+        android:layout_marginTop="40dp"
+        />
+
+    <TextView
+        android:id="@+id/tv2"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        app:layout_constraintLeft_toRightOf="@id/img2"
+        app:layout_constraintTop_toTopOf="@id/img2"
+        app:layout_constraintBottom_toBottomOf="@id/img2"
+        android:layout_marginLeft="20dp"
+        android:textColor="@color/colorBlackGrey"
+        android:background="@color/colorWhith"
+        android:gravity="left"
+        />
+
+    <Button
+        android:id="@+id/btn2"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        app:layout_constraintLeft_toRightOf="@id/tv2"
+        app:layout_constraintTop_toTopOf="@id/tv2"
+        app:layout_constraintBottom_toBottomOf="@id/tv2"
+        android:background="@drawable/button_seletor"
+        android:layout_marginLeft="20dp"
+        style="@style/MenuTitleBtn"
+        android:text="수정"
+        />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
