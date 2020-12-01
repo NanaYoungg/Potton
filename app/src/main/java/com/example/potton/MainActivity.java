@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
         //제스쳐 gif
         ImageView imageView = (ImageView)findViewById(R.id.main_gesture);
         GlideDrawableImageViewTarget gifImage = new GlideDrawableImageViewTarget(imageView);
-        Glide.with(this).load(R.drawable.swipe_down).into(gifImage);
+        Glide.with(this).load(R.drawable.ezgif_com_gif_maker).into(gifImage);
 
 
         //세팅 메뉴 이동

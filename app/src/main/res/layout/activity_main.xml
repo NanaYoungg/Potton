@@ -33,7 +33,7 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginRight="20dp"
-        android:background="@drawable/setting"
+        android:background="@drawable/setting_btn_customise"
         />
 
     <TextView
