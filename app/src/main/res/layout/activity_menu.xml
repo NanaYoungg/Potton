@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorMain">
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/hand"
+        app:layout_constraintTop_toTopOf="@id/menu_guesture_setting"
+        app:layout_constraintLeft_toLeftOf="@id/menu_guesture_setting"
+        />
+
+    <ImageView
+        android:id="@+id/tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:background="@color/colorSlapsh"
+        />
+    <ImageButton
+        android:id="@+id/back_btn"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/home"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="5dp"
+        />
+
+    <Button
+        android:id="@+id/menu_guesture_setting"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        app:layout_constraintTop_toBottomOf="@id/tool_bar"
+        app:layout_constraintRight_toRightOf="@id/tool_bar"
+        app:layout_constraintLeft_toLeftOf="@id/tool_bar"
+        android:background="@drawable/menu_btn"
+        android:layout_marginTop="100dp"
+        android:text="@string/guesture_setting"
+        style="@style/MenuBtn"
+        />
+
+    <Button
+        android:id="@+id/menu_sound_setting"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        app:layout_constraintTop_toBottomOf="@id/menu_guesture_setting"
+        app:layout_constraintRight_toRightOf="@id/menu_guesture_setting"
+        app:layout_constraintLeft_toLeftOf="@id/menu_guesture_setting"
+        android:background="@drawable/menu_btn"
+        android:layout_marginTop="50dp"
+        android:text="@string/sound_setting"
+        style="@style/MenuBtn"
+        />
+
+    <Button
+        android:id="@+id/menu_bluetooth_setting"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        app:layout_constraintTop_toBottomOf="@id/menu_sound_setting"
+        app:layout_constraintRight_toRightOf="@id/menu_sound_setting"
+        app:layout_constraintLeft_toLeftOf="@id/menu_sound_setting"
+        android:background="@drawable/menu_btn"
+        android:layout_marginTop="50dp"
+        android:text="@string/bluetooth_strring"
+        style="@style/MenuBtn"
+        />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

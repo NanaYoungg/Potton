@@ -22,4 +22,20 @@
         <item name="android:shadowDy">10.0</item>
         <item name="android:shadowColor">@color/colorSpShadow</item>
     </style>
+
+    <style name="TextOrange">
+        <item name="android:textColor">@color/colorOrange</item>
+        <item name="android:fontFamily">@font/nanumbarungothic_bold</item>
+        <item name="android:textSize">30dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:shadowColor">@color/colorOrangeShadow</item>
+    </style>
+
+    <style name="MenuBtn">
+        <item name="android:textColor">@color/colorWhith</item>
+        <item name="android:fontFamily">@font/nanumbarungothic_bold</item>
+        <item name="android:textSize">30dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
 </resources>

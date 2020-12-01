@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,12 +17,12 @@ public class SplashActivity extends AppCompatActivity {
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_splash);
-
+        //애니메이션
         ImageView imageView = (ImageView)findViewById(R.id.splash_gif);
-
         GlideDrawableImageViewTarget gifImage = new GlideDrawableImageViewTarget(imageView);
-
         Glide.with(this).load(R.drawable.door).into(gifImage);
 
         Handler hd = new Handler();

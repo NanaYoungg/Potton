@@ -6,4 +6,7 @@
     <color name="colorSlapsh">#5285c4</color>
     <color name="colorWhith">#ffffff</color>
     <color name="colorSpShadow">#3c6aa3</color>
+    <color name="colorMain">#d5e4f5</color>
+    <color name="colorOrange">#f04422</color>
+    <color name="colorOrangeShadow">#756a67</color>
 </resources>
