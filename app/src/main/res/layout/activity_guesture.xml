@@ -35,4 +35,28 @@
         android:layout_marginTop="5dp"
         />
 
+    <ImageView
+        android:layout_width="550dp"
+        android:layout_height="350dp"
+        android:background="@drawable/handtwo"
+        app:layout_constraintTop_toBottomOf="@id/tool_bar"
+        android:layout_marginTop="30dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+    <Button
+        android:id="@+id/gustuerSetting_btn"
+        android:layout_width="300dp"
+        android:layout_height="80dp"
+        style="@style/MenuBtn"
+        android:background="@drawable/button_seletor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tool_bar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="200dp"
+        android:text="제스쳐 설정하기"
+        />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
